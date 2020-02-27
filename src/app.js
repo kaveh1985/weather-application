@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -99,6 +100,6 @@ app.get('*',(req, res) => {
 
 
 
-app.listen(3000, () => {
-	console.log('listening on port 3000');
+app.listen(port, () => {
+	console.log('listening on port' + port);
 });

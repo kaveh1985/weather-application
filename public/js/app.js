@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit', (event) => {
 	      errorCleaning()
 	      loadingParagraph()
 	      event.preventDefault()
-		  const data = fetch('http://localhost:3000/about?adresse=' + input.value.toString())
+		  const data = fetch('/about?adresse=' + input.value.toString())
 	     .then(response => {
 	       response.json().then((data) => {
 	      	if(data.error) {
