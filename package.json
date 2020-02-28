@@ -4,7 +4,8 @@
   "description": "weather application first version",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "kaveh Ramzanzad",
@@ -16,7 +17,9 @@
     "hbs": "^4.1.0",
     "request": "^2.88.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kaveh1985/weather-application.git"

@@ -18,12 +18,13 @@ weatherForm.addEventListener('submit', (event) => {
 	      		 clearInput()
 	      	} else {
 				   let finalData = data.weatherInfo;
+				   let celsius = Math.round(((data.weatherInfo.temperature-32)*5/9));
 	      		   errorCleaning() 
 	      		   cleanerParagraph();
-	      		   clearInput();
+				   clearInput();
 	      		   timezone.innerText += " Zone: " + data.weatherInfo.timezone;
-	      		   tempereture.innerText += " Temperature: " + data.weatherInfo.temperature;
-	      		   probability.innerText += " Probebility: " + data.weatherInfo.precipProbability;
+	      		   tempereture.innerText += " Temperature: " + celsius;
+	      		   probability.innerText += " Precipitation: " + data.weatherInfo.precipProbability+"%";
 	      		   percipitation.innerText += " Condition: " + data.weatherInfo.precipType;
 
             	}
@@ -52,11 +53,14 @@ weatherForm.addEventListener('submit', (event) => {
 
 
 	function errorDataMessage(error) {
-		let p = document.querySelectorAll('P');
-		  for(var i = 1; i < p.length-1; i++){
-		     p[i].innerText = error;
-		     p[i].style.color = "red";
-		  }
+		let errorMessage = document.getElementById('errorMessage');
+		errorMessage.innerText = error;
+		errorMessage.style.color = "red"
+		// let p = document.querySelectorAll('P');
+		//   for(var i = 1; i < p.length-1; i++){
+		//      p[i].innerText = error;
+		//      p[i].style.color = "red";
+		//   }
 	}
 
 
