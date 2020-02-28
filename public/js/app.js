@@ -5,6 +5,7 @@ let probability = document.getElementById('probability');
 let percipitation = document.getElementById('percipitation');
 let input = document.getElementById('inp');
 
+
 weatherForm.addEventListener('submit', (event) => {
 	      errorCleaning()
 	      loadingParagraph()
@@ -16,12 +17,12 @@ weatherForm.addEventListener('submit', (event) => {
 	      		 errorDataMessage(data.error);
 	      		 clearInput()
 	      	} else {
-	      		 let finalData = data.weatherInfo;
+				   let finalData = data.weatherInfo;
 	      		   errorCleaning() 
 	      		   cleanerParagraph();
 	      		   clearInput();
 	      		   timezone.innerText += " Zone: " + data.weatherInfo.timezone;
-	      		   tempereture.innerText += " Temperature: " + data.weatherInfo.tempereture;
+	      		   tempereture.innerText += " Temperature: " + data.weatherInfo.temperature;
 	      		   probability.innerText += " Probebility: " + data.weatherInfo.precipProbability;
 	      		   percipitation.innerText += " Condition: " + data.weatherInfo.precipType;
 

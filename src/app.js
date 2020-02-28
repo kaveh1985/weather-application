@@ -38,11 +38,13 @@ app.get('', (req, res) => {
 })
 
 
-app.get('/test', (req, res) => {
-	res.render('test')
+app.get('/profile', (req, res) => {
+	res.render('about',{
+		name: "kaveh",
+		country: "France",
+		title: "Profile"
+	});
 })
-
-
 
 app.get('/about', (req, res) => {
 	const adresse = req.query.adresse;

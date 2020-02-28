@@ -43,3 +43,14 @@ header a {
 	width: 350px;
 	height: 500px;
 }
+
+#inp, #btn {
+	padding: 8px;
+	border: 1px solid gray;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+#btn {
+	width: 60px;
+}
